@@ -1,0 +1,2 @@
+para emplear cosas específicas de las librerias
+FAcade Pattern para funciones específicas basadas en las librerías sin tener que llamarlas
