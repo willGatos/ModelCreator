@@ -74,6 +74,14 @@ import {
       height: "auto",
       maxHeight:"100%",
     },
+    barcode:{
+      width:"70%",
+      maxWidth:"260px",
+      height: "100%",
+      maxHeight: "80px",
+      margin:0,
+      padding: 0
+    },
     centerAll:{
       display: "flex",
       justifyContent: "center",
@@ -103,7 +111,7 @@ import {
             </View>
             <View style={[styles.fullCell, styles.smallPadding, styles.centerAll]}>
               
-              <Image src={`https://bwipjs-api.metafloor.com/?bcid=code128&text=${e.HBL}&includetext`} style={styles.imageSize}/>{/* Código de Barras */}
+              <Image style={styles.barcode} src={`https://www.webarcode.com/barcode/image.php?code=${e.HBL}&type=C128B&xres=1&height=50&width=167&font=3&output=png&style=197`} />{/* Código de Barras */}
               
             </View>
 
