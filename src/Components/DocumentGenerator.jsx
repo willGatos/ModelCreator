@@ -103,7 +103,7 @@ import {
             </View>
             <View style={[styles.fullCell, styles.smallPadding, styles.centerAll]}>
               
-              <Image src={`http://bwipjs-api.metafloor.com/?bcid=code128&text=${e.HBL}&includetext`} style={styles.imageSize}/>{/* Código de Barras */}
+              <Image src={`https://bwipjs-api.metafloor.com/?bcid=code128&text=${e.HBL}&includetext`} style={styles.imageSize}/>{/* Código de Barras */}
               
             </View>
 
