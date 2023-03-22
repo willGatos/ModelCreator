@@ -175,7 +175,7 @@ export default function EnhancedTable({allHBL, setAllHBL}) {
     } else if (selectedIndex > 0) {
       newSelected = newSelected.concat(
         selected.slice(0, selectedIndex),
-        selected.slice(selectedIndex + 1),
+        selected.slice(selectedIndex + 1)
       );
      
     }

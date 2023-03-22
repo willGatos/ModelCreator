@@ -82,10 +82,10 @@ import {
       alignContent: "center"
     },
     fontHeader:{
-      fontSize: "12px"
+      fontSize: "30px"
     },
     fontSmaller:{
-      fontSize: "15px"
+      fontSize: "36px"
     }
   });
   
@@ -140,12 +140,12 @@ import {
             </View>
 
             <View style={[styles.fullCell, styles.mediumPadding]}>
-              <Text>Contenido:</Text>
-              <Text>{e.tipoDeMercancia}</Text>
-              <Text>
+              <Text style={styles.fontHeader}>Contenido:</Text>
+              <Text style={styles.fontHeader}>{e.tipoDeMercancia}</Text>
+              <Text style={styles.fontHeader}>
                Peso:
               </Text>
-              <Text>
+              <Text style={styles.fontHeader}>
                {e.PesoUno}Kg
               </Text>
             </View>
