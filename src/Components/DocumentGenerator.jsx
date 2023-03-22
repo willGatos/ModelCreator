@@ -49,14 +49,14 @@ import {
       padding: "1rem",
     },
     cellBig: {
-      width:"70%",
+      width:"60%",
       flexBasis: "70%",
       border: "1px solid #000",
       padding: "1rem",
       borderRight:"0px",
     },
     cellSmal: {
-      width:"30%",
+      width:"40%",
       flexBasis: "30%",
       border: "1px solid #000",
       borderLeft:"0px",
@@ -70,7 +70,7 @@ import {
     },
     imageSize:{
       width:"auto",
-      maxWidth:"50%",
+      maxWidth:"100%",
       height: "auto",
       maxHeight:"100%",
     },
@@ -134,7 +134,9 @@ import {
             </View>
             <View style={[styles.cellSmal, styles.mediumPadding]}>
               
-            <Image src={`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=HBL-${e.HBL}-${e.Consignatario}-${e.DireccionDelCon}-${e.cIdentidad}-${e.Telefono}-${e.Remitente}-${e.Direccion}`} style={styles.imageSize}/>{/* Código de Barras */}
+            <Image
+              style={styles.imageSize}
+              src={`https://api.qrserver.com/v1/create-qr-code/?size=800x800&data=HBL-${e.HBL}-${e.Consignatario}-${e.DireccionDelCon}-${e.cIdentidad}-${e.Telefono}-${e.Remitente}-${e.Direccion}`} />{/* Código de Barras */}
             </View>
 
             <View style={[styles.fullCell, styles.mediumPadding]}>
