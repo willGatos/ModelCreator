@@ -353,7 +353,7 @@ export default function EnhancedTable({allHBL, setAllHBL}) {
                         <Button onClick={()=>{
                       let param = new URLSearchParams(row).toString();
                           console.log(param)
-                          window.open("https://algo.vercel.app/?"+param)}} >
+                          window.open("https://hbl-model.vercel.app/?"+param)}} >
                           IMPRIMIR
                         </Button>  
                       </TableCell>
