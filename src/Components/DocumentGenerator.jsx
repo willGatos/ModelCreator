@@ -90,74 +90,66 @@ import {
   });
   
   // Create Document Component
-  function BasicDocument() {
+  function BasicDocument({allHBL}) {
     return (
       <PDFViewer style={styles.viewer}>
         {/* Start of the document*/}
         <Document>
-          {/*render a single page*/}
+          {allHBL.map(e=>(
           <Page size="A4" style={styles.page}>
           <View style={styles.container}>
-            <View style={[styles.cell, styles.smallPadding]}>
-              <Text>CubaMax - EEUU</Text>
-            </View>
-            <View style={[styles.cell, styles.smallPadding]}>
-              <Text>Cubanacan</Text>
+            <View style={[styles.cell, styles.fullCell, styles.smallPadding, styles.centerAll]}>
+              <Text>ESPIRAL</Text>
             </View>
             <View style={[styles.fullCell, styles.smallPadding, styles.centerAll]}>
               
-              <Image src={"https://barcodeapi.org/api/515154sadasd"} style={styles.imageSize}/>{/* Código de Barras */}
+              <Image src={"https://barcodeapi.org/api/"+ e.HBL} style={styles.imageSize}/>{/* Código de Barras */}
               
-            </View>
-            <View style={[styles.fullCell, styles.smallPadding]}>
-              {<Text style={styles.rightText}>1s</Text>}
             </View>
 
             <View style={[styles.cellBig, styles.mediumPadding, styles.fontSmaller]}>
               <Text style={[styles.fontHeader]}>
                 Remitente:
               </Text>
-              <Text>JULIO PUERTAS, FL, MIAMI</Text>
+              <Text>
+              {e.Remitente}
+              </Text>
+              <Text>
+              Dirección:
+                
+              </Text>
+              <Text>
+              {e.Direccion}
+              </Text>
+              <Text>{e.Consignatario}</Text>
               <Text style={[styles.fontHeader]}>
                 Destinatario:
               </Text>
+              <Text>{e.Consignatario}</Text>
+              <Text>Dirección:</Text>
+                {e.DireccionDelCon}
+              <Text>CI: {e.cIdentidad}</Text>
+              <Text>{e.Telefono}</Text>
               
-              <Text>Dirección</Text>
-              
-              <Text>Provincia / Municipio</Text>
-              <Text>Carnet de Identidad</Text>
-              <Text>TELEFONO</Text>
-              <Text>CANTINFLAS VILLALOBOS</Text>
             </View>
             <View style={[styles.cellSmal, styles.mediumPadding]}>
               
-            <Image src={"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Exampled"} style={styles.imageSize}/>{/* Código de Barras */}
+            <Image src={`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=HBL-${e.HBL}-${e.Consignatario}-${e.DireccionDelCon}-${e.cIdentidad}-${e.Telefono}-${e.Remitente}-${e.Direccion}`} style={styles.imageSize}/>{/* Código de Barras */}
             </View>
 
             <View style={[styles.fullCell, styles.mediumPadding]}>
               <Text>Contenido:</Text>
-              <Text>Miscelania</Text>
-            </View>
-            <View style={[styles.cell, styles.mediumPadding]}>
+              <Text>{e.tipoDeMercancia}</Text>
               <Text>
-                41,7Lb
+               {e.PesoUno}Lb
               </Text>
             </View>
-            <View style={[styles.cell, styles.mediumPadding]}>
-            <Text>CODEBAr</Text>
-            </View>
+            
           </View>
           </Page>
-
+          ))}
         </Document>
       </PDFViewer>
     );
   }
   export default BasicDocument;
-
-  /**
-   * <Image src="http://api.qrserver.com/v1/create-qr-code/?data=WILLIAMMMM  Marrero
-          Masferrer
-          - Centro Habana 
-          &size=100x100"/>
-   */
