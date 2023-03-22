@@ -69,8 +69,8 @@ import {
       padding: "1rem",
     },
     imageSize:{
-      width:"auto",
-      maxWidth:"100%",
+      width:"100%",
+      maxWidth:"350px",
       height: "auto",
       maxHeight:"100%",
     },
@@ -103,7 +103,7 @@ import {
             </View>
             <View style={[styles.fullCell, styles.smallPadding, styles.centerAll]}>
               
-              <Image src={"https://barcodeapi.org/api/"+ e.HBL} style={styles.imageSize}/>{/* Código de Barras */}
+              <Image src={`http://bwipjs-api.metafloor.com/?bcid=code128&text=${e.HBL}&includetext`} style={styles.imageSize}/>{/* Código de Barras */}
               
             </View>
 
