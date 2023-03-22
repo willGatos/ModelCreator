@@ -18,7 +18,7 @@ export default function FormDialog({
     PesoUno:"",  //(lb.)
     valorDeclarado:"", //(Factura)
     //numBulto:"",
-    HBL: 30801000000,
+    HBL: 30804000000,
     Fecha:"",
     Consignatario:"",
     PasaporteC:"",
