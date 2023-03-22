@@ -114,7 +114,7 @@ export default function FormDialog({
             onChange={handleChange}
             margin="dense"
             id="name"
-            label="Peso(Lb)"
+            label="Peso(Kg)"
             name="PesoUno"
             type="text"
             fullWidth

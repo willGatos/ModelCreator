@@ -17,7 +17,7 @@ const headCells = [
     }, */
     {
       id: 'PesoUno',
-      label: 'PesoUno',
+      label: 'Peso(Kg)',
   },
     /* {
       id: 'Ancho',

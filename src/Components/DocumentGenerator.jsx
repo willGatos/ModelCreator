@@ -33,8 +33,8 @@ import {
       display: "flex",
       flexWrap: "wrap",
       flexDirection:"row",
-      
-      width: "80%",
+      height: "800px",
+      width: "90%",
     },
     smallPadding:{
       padding:"5px"
@@ -143,7 +143,10 @@ import {
               <Text>Contenido:</Text>
               <Text>{e.tipoDeMercancia}</Text>
               <Text>
-               {e.PesoUno}Lb
+               Peso:
+              </Text>
+              <Text>
+               {e.PesoUno}Kg
               </Text>
             </View>
             
