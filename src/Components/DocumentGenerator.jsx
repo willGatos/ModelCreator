@@ -82,10 +82,10 @@ import {
       alignContent: "center"
     },
     fontHeader:{
-      fontSize: "30px"
+      fontSize: "26px"
     },
     fontSmaller:{
-      fontSize: "36px"
+      fontSize: "24px"
     }
   });
   
@@ -114,20 +114,14 @@ import {
               <Text>
               {e.Remitente}
               </Text>
-              <Text>
-              Dirección:
-                
-              </Text>
-              <Text>
-              {e.Direccion}
-              </Text>
+              
               <Text>{e.Consignatario}</Text>
               <Text style={[styles.fontHeader]}>
                 Destinatario:
               </Text>
               <Text>{e.Consignatario}</Text>
               <Text>Dirección:</Text>
-                {e.DireccionDelCon}
+              <Text>{e.DireccionDelCon}</Text>
               <Text>CI: {e.cIdentidad}</Text>
               <Text>{e.Telefono}</Text>
               
