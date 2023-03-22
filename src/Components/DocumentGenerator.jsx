@@ -115,11 +115,11 @@ import {
               {e.Remitente}
               </Text>
               
-              <Text>{e.Consignatario}</Text>
               <Text style={[styles.fontHeader]}>
                 Destinatario:
               </Text>
               <Text>{e.Consignatario}</Text>
+
               <Text>Dirección:</Text>
               <Text>{e.DireccionDelCon}</Text>
               <Text>CI: {e.cIdentidad}</Text>
