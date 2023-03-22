@@ -130,74 +130,7 @@ function stableSort(array, comparator) {
 
 export default function EnhancedTable({allHBL, setAllHBL}) {
   const [rows,setRow] = useState([
-    createData(
-      "Miscelania",
-      //"descripcion",
-      "1 Unidad",
-      //"NUMERO DE ETIQUETA", // Se lo tengo que vincular yo
-      "15lb",  //(lb.)
-      "Valor Declarado", //(Factura)
-      //"numBulto",
-      "HBL2",
-      "Fecha",
-      "Consignatario",
-      "PasaporteC",
-      "cIdentidad",
-      "DireccionDelCon",
-      "Telefono",
-      
-      "Embarcador",
-      "JUAM PEREZ",
-      "Pasaporte",
-      "Direccion",
-      
-      
-      "Volumen",
-      "Valor",
-      ),createData(
-        "tipoDeMercancia",
-        //"descripcion",
-        "cant",
-        //"numEtiq",
-        "16lb", 
-        "valorDeclarado", 
-        //"numBulto",
-        "HBL",
-        "Fecha",
-        "Consignatario",
-        "PasaporteC",
-        "cIdentidad",
-        "CASA VIEJA ENTRE PARQUE ROJO Y PARQUE NEGRO",
-        "+535841919139",
-        "Embarcador",
-        "ASDSAD",
-        "Pasaporte",
-        "Direccion",
-        "Volumen",
-        "Valor",
-        ),
-        createData(
-          "tipoDeMercancia",
-          //"descripcion",
-          "cant",
-          //"numEtiq",
-          "PesoUno1", 
-          "valorDeclarado", 
-          //"numBulto",
-          "HBL3",
-          "Fecha",
-          "Consignatario",
-          "PasaporteC",
-          "cIdentidad",
-          "CASA VIEJA ENTRE PARQUE ROJO Y PARQUE NEGRO",
-          "+535841919139",
-          "Embarcador",
-          "ASDSAD",
-          "Pasaporte",
-          "Direccion",
-          "Volumen",
-          "Valor",
-          ),
+    
   ]);
   const [open, setOpen] = React.useState(false);
   const [order, setOrder] = React.useState('asc');
