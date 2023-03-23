@@ -107,7 +107,7 @@ import {
           <Page size="A4" style={styles.page}>
           <View style={styles.container}>
             <View style={[styles.cell, styles.fullCell, styles.smallPadding, styles.centerAll]}>
-              <Text>ESPIRAL</Text>
+              <Text>ESPIRAL SRL</Text>
             </View>
             <View style={[styles.fullCell, styles.smallPadding, styles.centerAll]}>
               
