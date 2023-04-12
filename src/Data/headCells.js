@@ -129,6 +129,10 @@ const headCells = [
       id: 'Valor',
       label: 'Valor',
     },
+    {
+      id: 'docCategory',
+      label: 'Documento',
+    },
     /* {
       id: 'numSaco',
       label: 'numSaco',

@@ -6,6 +6,11 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import { Select } from '@mui/material';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+//import FormHelperText from '@mui/material/FormHelperText';
+import FormControl from '@mui/material/FormControl';
 
 export default function FormDialog({
     open, setOpen,setRow
@@ -32,6 +37,7 @@ export default function FormDialog({
     Volumen:"",
     Valor:"",
     numSaco:"",
+    docCategory: ""
   })
 
   const handleClickOpen = () => {
@@ -98,17 +104,6 @@ export default function FormDialog({
             fullWidth
             variant="standard"
           />}
-          {/* <TextField
-          value={state.numEtiq}
-            onChange={handleChange}
-            margin="dense"
-            id="name"
-            label="Número de Etiqueta"
-            type="text"
-            name="numEtiq"
-            fullWidth
-            variant="standard"
-          /> */}
           <TextField
           value={state.PesoUno}
             onChange={handleChange}
@@ -271,15 +266,20 @@ export default function FormDialog({
             fullWidth
             variant="standard"
           />
-          {/* <TextField
-          value={state.numSaco}
-            onChange={handleChange}
-            margin="dense"
-            label="numeroSaco(NI IDEA, Estaba en el de Aero Varadero)"
-            name='numSaco'
-            fullWidth
-            variant="standard"
-          /> */}
+          <FormControl sx={{ m: 1, minWidth: 120 }}>
+        <InputLabel id="demo-simple-select-helper-label">Categoría del Documento</InputLabel>
+        <Select
+          labelId="demo-simple-select-helper-label"
+          id="demo-simple-select-helper"
+          value={state.docCategory}
+          label="Documento"
+          name="docCategory"
+          onChange={handleChange}
+        >
+          <MenuItem value="AWL"> AWL </MenuItem>
+          <MenuItem value="HBL">HBL</MenuItem>
+        </Select>
+      </FormControl>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>CERRAR</Button>

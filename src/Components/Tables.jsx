@@ -38,6 +38,7 @@ function createData(
     Direccion,
     Volumen,
     Valor,
+    docCategory,
     ) {
   return {
     tipoDeMercancia,
@@ -68,6 +69,7 @@ function createData(
     
     Volumen,
     Valor,
+    docCategory,
   };
 }
 /**
@@ -261,10 +263,7 @@ export default function EnhancedTable({allHBL, setAllHBL}) {
                       
                       
                       <TableCell align="center">{row.valorDeclarado}</TableCell>
-                      
-                      {/* <TableCell align="center">{row.numBulto}</TableCell>  
-                       */}
-                      
+                    
                       <TableCell align="center">{row.HBL}</TableCell>
                       <TableCell align="center">{row.Fecha}</TableCell>
                       
@@ -282,11 +281,12 @@ export default function EnhancedTable({allHBL, setAllHBL}) {
                       
                       <TableCell align="center">{row.Volumen}</TableCell>
                       <TableCell align="center">{row.Valor}</TableCell>
+                      <TableCell align="center">{row.docCategory}</TableCell>
                       <TableCell align="center">
                         <Button onClick={()=>{
                       let param = new URLSearchParams(row).toString();
                           console.log(param)
-                          window.open("https://hbl-model.vercel.app/?"+param)}} >
+                          window.open("http://localhost:5500/HBL-Model/index.html?"+param)}} >
                           IMPRIMIR
                         </Button>  
                       </TableCell>
