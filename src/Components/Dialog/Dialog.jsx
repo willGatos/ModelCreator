@@ -276,7 +276,7 @@ export default function FormDialog({
           name="docCategory"
           onChange={handleChange}
         >
-          <MenuItem value="AWL"> AWL </MenuItem>
+          <MenuItem value="HAWB"> AWL </MenuItem>
           <MenuItem value="HBL">HBL</MenuItem>
         </Select>
       </FormControl>
